@@ -2,13 +2,104 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>Data Lovers</title>
+    <title>Portal Rick and Morty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" />
+    <link rel="short cut icon" type="image/x-icon"
+    src="images/pickle.png" />
+    <!--<embed src="music/theme-song.mp3" autostarty="true" loop="true" volume ="80"
+    width="0" height="0">-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <div class="sidebar">
+        <h2>MENÚ</h2>
+        <ul>
+          <li><a href="#" class="menu1">PORTAL</a></li>
+          <li><a href="#" class="menu2">¿RICK AND MORTY?</a></li>
+          <li><a href="#" class="menu3">CHARACTERES</a></li>
+        </ul>
+        <div class="footer-menu">
+        <a href="https://www.instagram.com/rickandmorty/?hl=es-la"
+        target="_blank" class="link-inst"><img src="images/instagram.png"
+        alt="instagram" title="instagram" class="instagram"/></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="pages">
+        <img src="images/menu.svg" alt="menu" class="menu"/>
+      <!--PÁGINA UNO-->
+      <div class="portal" id="portal">
+        <br>
+        <img id="logo" src="images/logo.png" />
+        <form id="search">
+          <input type="text" id="seeker" placeholder="character name" class="seeker-style"/>
+        </form>
+        <br>
+        <br>
+        <h3>If you don't know the name, click <a href="#" class="link">here</a></h3>
+      </div>
+      <!--PÁGINA DOS-->
+      <div class="information" id="information">
+        <img src="images/rick-and-morty.png" class="rick-and-morty"
+        alt="Rick and Morty" title="Rick and Morty" />
+        <p class="content-info">
+          <strong>Rick and Morty</strong> is an American television series
+          of adult animation created by Justin Roiland and Dan Harmon to
+          Adult Swim. The series follows the misadventures of a scientist, Rick,
+          and his easily influenced grandson, Morty, who spend time between the
+          domestic life and space, temporary and intergalactic travel.
+          Roiland is in charge of giving voice to the two main characters,
+          the series also includes the voices of Chris Parnell, Spencer Grammer,
+          and Sarah Chalke.
+          <br />
+          <br/>
+          The origins of the series can be found in a short film
+          rudimentary animated by Roiland for Channel 101 film festival
+          called Doc and Mharti, a parody of the main protagonists of
+          Back to the Future. NBC dismissed Harmon for arguments between him and
+          the Community series executives, and then he and Roiland developed
+          a series based on the recently released movie. The series has
+          been universally acclaimed for its originality, creativity and humor.
+        </p>
+      </div>
+      <!--PÁGINA TRES-->
+      <div class="characteres" id="characteres">
+        <br>
+          <select class="sort-style" id="sort">
+            <option value="" selected disabled>Sort by</option>
+            <option value="asc">Name A - Z</option>
+            <option value="des">Name Z - A</option>
+          </select>
+        <br>
+            <select class="species-style" id="species">
+                  <option value="" selected disabled>Species</option>
+                  <option value="Human">Human</option>
+                  <option value="Animal">Animal</option>
+                  <option value="Alien">Alien</option>
+                  <option value="Humanoid">Humanoid</option>
+                  <option value="Cronenberg">Cronenberg</option>
+                  <option value="Mytholog">Mytholog</option>
+                  <option value="Robot">Robot</option>
+            </select>
+            <select class="status-style" id="status">
+              <option value="" selected disabled>Status</option>
+              <option value="Alive">Alive</option>
+              <option value="Dead">Dead</option>
+              <option value="unknown">unknown</option>
+            </select>
+        <br>
+        <div class="char-container" id="container"></div>
+      </div>
+      </div>
+    </main>
     <script type="module" src="main.js"></script>
+    <!--<div class="splash" id="splash">
+      <img src="images\splashscreen.gif" class="fade-in">
+    </div>-->
   </body>
+  <footer>© Copyright 2020 | Data Lovers | Laboratoria | All rights reserved</footer>
 </html>
